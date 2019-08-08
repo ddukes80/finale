@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>What Basketball Player Are You?</title>
+</head>
+<body>
+<form id="form1">
+<p style="font: Kreon; font-size: 25px; color: black; text-align: left; margin-left: 300px"><b> 1. What colors do you wear?:</b></p>
+<label for="var_string"><input type="radio" name="variable" value="60" id="var_string"/>Purple n Gold</label>
+<label for="var_join"><input type="radio" name="variable" value="0" id="var_join"/>Green</label>
+<label for="var_info"><input type="radio" name="variable" value="10" id="var_info" />Red</label>
+<p style="font: Kreon; font-size: 25px; color: black; text-align: left; margin-left: 300px"><b>2. What position do you play?:</b></p>
+<label for="sub_string"><input type="radio" name="sub" value="80" id="sub_string"/>foward</label>
+<label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join"/>guard</label>
+<label for="sub_info"><input type="radio" name="sub" value="20" id="sub_info" />Center</label>
+<p style="font: Kreon; font-size: 25px; color: black; text-align: left; margin-left: 300px"><b>3. Are You (a)an...:</b></p>
+<label for="cat_string"><input type="radio" name="con" value="20" id="cat_string" /> Offensive player</label>
+<label for="cat_join"><input type="radio" name="con" value="0" id="cat_join" />Defensive player</label>
+<label for="cat_info"><input type="radio" name="con" value="60" id="cat_info" />Balanced</label>
+<p style="font: Kreon; font-size: 25px; color: black; text-align: left; margin-left: 300px"><b>4. Do you like to...:</b></p>
+<label for="if_string"><input type="radio" name="ifstate" value="60" id="if_string" />dribble</label>
+<label for="if_join"><input type="radio" name="ifstate" value="0" id="if_join" /> inside score</label>
+<label for="if_info"><input type="radio" name="ifstate" value="10" id="if_info" />shooter</label>
+<p style="font: Kreon; font-size: 25px; color: black; text-align: left; margin-left: 300px"><b>5. Are you? </b></p>
+<label for="tim_string"><input type="radio" name="time" value="50" id="tim_string" />Rarely been injured</label>
+<label for="tim_join"><input type="radio" name="time" value="0" id="tim_join" />Balanced</label>
+<label for="tim_info"><input type="radio" name="time" value="10" id="tim_info" />injury prone</label>
+<p style="font: Kreon; font-size: 25px; color: black; text-align: left; margin-left: 300px"><b>6. What role do you have on your team?:</b></p>
+<label for="var_string"><input type="radio" name="variable" value="70" id="var_string"/>Team Player</label>
+<label for="var_join"><input type="radio" name="variable" value="70" id="var_join"/>Ball Hog</label>
+<label for="var_info"><input type="radio" name="variable" value="10" id="var_info" />Leader</label>
+<br>
+<br>
+<br>
+<button type="submit" value="Submit" style="margin-left: 740px">Submit</button>
+</form>
+<br>
+<div class="w3-large" style ="background-color: #55c7e1">
+<p>Results: <span id="grade">__</span></p>
+<p id="grade2"></p>
+</div><!-- close main div -->
+<script>
+document.getElementById("form1").onsubmit=function() {
+       variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+     sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+     con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+     ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+     time = parseInt(document.querySelector('input[name = "time"]:checked').value);
+     
+     
+     result = variable + sub + con + ifstate + time;
+     
+  document.getElementById("grade").innerHTML = result;
+if (result >= 200) {result2 = "Lebron a physically sound player and one of the most consistent ever. He plays the foward position and wears the Lakers jersey of purple and gold. He passes the ball and dribbles with the best of them all. Also a great team player."};
+if (result == 100) {result2 =  "Kobe one of the best offensive players of all time. He handles scoring the ball and he wears purple n gold for the lakers. Also is considered a ball hog for shooting so much and was a guard."};
+if (result < 100) {result2 = "Bill Russell is one of the greatest players of all time he plays the center position while standing 7 feet tall, he was a great team player who played defense and won 11 championships."};
+document.getElementById("grade2").innerHTML = result2; 
+     
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+</script>
+ 
+</fieldset>
+</form> 
+Collapse
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+</body>
+</html>
